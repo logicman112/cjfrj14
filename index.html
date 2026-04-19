@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>철거 전문 - 서울 인천 경기 인테리어 철거 전문업체</title>
+    <meta name="description" content="서울 인천 경기 아파트 빌라 상가 인테리어 철거 전문. 욕실 주방 바닥 천장 전체철거 당일 견적. 깔끔하고 빠른 철거 서비스.">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzc4MzUwZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTUlIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+8J+UqTwvdGV4dD48L3N2Zz4=" type="image/svg+xml">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:#1a1208;color:#fff;overflow-x:hidden}
+
+        /* 플로팅 */
+        .float-call{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+        .float-call a{background:linear-gradient(135deg,#d97706,#92400e);color:#fff;padding:16px 24px;border-radius:12px;font-size:1em;font-weight:900;text-decoration:none;box-shadow:0 6px 25px rgba(217,119,6,.5);display:flex;align-items:center;gap:8px;animation:glow 2s infinite}
+        .float-call span{background:rgba(0,0,0,.85);color:#fbbf24;padding:6px 14px;border-radius:8px;font-size:.78em;font-weight:700}
+        @keyframes glow{0%,100%{box-shadow:0 6px 25px rgba(217,119,6,.5)}50%{box-shadow:0 6px 40px rgba(217,119,6,.9)}}
+
+        /* 히어로 */
+        .hero{min-height:100vh;background:linear-gradient(160deg,#1a1208 0%,#2d1f0e 40%,#1a1208 100%);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;padding:80px 60px;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d97706' fill-opacity='0.04'%3E%3Cpath d='M0 0h20v20H0zM20 20h20v20H20z'/%3E%3C/g%3E%3C/svg%3E")}
+        .hero::after{content:'';position:absolute;right:-100px;top:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(217,119,6,.08),transparent 70%);border-radius:50%}
+
+        .hero-left{position:relative;z-index:1}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,.15);border:1px solid rgba(217,119,6,.35);padding:8px 20px;border-radius:6px;font-size:.82em;letter-spacing:1px;margin-bottom:28px;color:#fbbf24}
+        .hero h1{font-size:clamp(2em,4vw,3.5em);font-weight:900;line-height:1.2;margin-bottom:22px}
+        .hero h1 .point{color:#d97706}
+        .hero h1 .br{display:block}
+        .hero-desc{font-size:1.05em;color:rgba(255,255,255,.78);line-height:1.85;margin-bottom:35px}
+        .check-list{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+        .check-item{display:flex;align-items:center;gap:12px;font-size:.95em;color:rgba(255,255,255,.88)}
+        .check-item::before{content:'✓';width:24px;height:24px;background:#d97706;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8em;font-weight:900;flex-shrink:0;color:#fff}
+        .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+        .btn-main{background:linear-gradient(135deg,#d97706,#92400e);color:#fff;padding:18px 42px;border-radius:10px;font-size:1.2em;font-weight:900;text-decoration:none;box-shadow:0 6px 20px rgba(217,119,6,.4);transition:transform .2s}
+        .btn-main:hover{transform:translateY(-3px)}
+        .btn-sub{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:18px 30px;border-radius:10px;font-size:.98em;font-weight:700;text-decoration:none;transition:background .2s}
+        .btn-sub:hover{background:rgba(255,255,255,.14)}
+
+        /* 히어로 우측 카드 */
+        .hero-right{position:relative;z-index:1}
+        .quick-card{background:rgba(255,255,255,.06);backdrop-filter:blur(15px);border:1px solid rgba(217,119,6,.25);border-radius:20px;padding:35px;overflow:hidden}
+        .quick-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#d97706,#fbbf24,#d97706)}
+        .quick-title{font-size:1.1em;font-weight:800;margin-bottom:22px;color:#fbbf24}
+        .work-list{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+        .work-item{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(255,255,255,.05);border-radius:8px;border:1px solid rgba(255,255,255,.08)}
+        .work-item .name{font-size:.92em;color:rgba(255,255,255,.88)}
+        .work-item .tag{background:rgba(217,119,6,.2);color:#fbbf24;padding:3px 10px;border-radius:12px;font-size:.75em;font-weight:700}
+        .call-now{background:linear-gradient(135deg,#d97706,#92400e);border-radius:12px;padding:22px;text-align:center}
+        .call-now p{font-size:.88em;color:rgba(255,255,255,.8);margin-bottom:8px}
+        .call-now a{font-size:1.4em;font-weight:900;color:#fff;text-decoration:none;display:block}
+
+        /* 배지바 */
+        .badge-bar{background:rgba(255,255,255,.04);border-top:1px solid rgba(217,119,6,.15);border-bottom:1px solid rgba(217,119,6,.15);padding:22px 20px}
+        .badge-wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:35px;max-width:900px;margin:0 auto}
+        .badge-item{text-align:center}
+        .badge-n{font-size:2em;font-weight:900;color:#d97706;display:block;line-height:1}
+        .badge-l{font-size:.78em;color:rgba(255,255,255,.5);margin-top:4px}
+
+        /* 섹션 */
+        .sec{padding:75px 20px}
+        .sec-inner{max-width:1050px;margin:0 auto}
+        .sec-head{text-align:center;margin-bottom:50px}
+        .sec-tag{display:inline-block;background:rgba(217,119,6,.15);border:1px solid rgba(217,119,6,.3);color:#d97706;padding:4px 14px;border-radius:4px;font-size:.78em;font-weight:700;letter-spacing:2px;margin-bottom:14px}
+        .sec-title{font-size:clamp(1.6em,3.5vw,2.3em);font-weight:900;margin-bottom:10px}
+        .sec-title span{color:#d97706}
+        .sec-desc{color:rgba(255,255,255,.58);font-size:.97em;line-height:1.7}
+
+        /* 서비스 그리드 */
+        .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+        .svc-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:30px 22px;transition:all .3s;position:relative;overflow:hidden}
+        .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#d97706,#fbbf24);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+        .svc-card:hover{background:rgba(217,119,6,.07);border-color:rgba(217,119,6,.35);transform:translateY(-4px)}
+        .svc-card:hover::after{transform:scaleX(1)}
+        .svc-icon{font-size:2.5em;margin-bottom:14px;display:block}
+        .svc-card h3{font-size:1.02em;font-weight:800;margin-bottom:8px;color:#fff}
+        .svc-card p{font-size:.85em;color:rgba(255,255,255,.55);line-height:1.65}
+        .svc-card .svc-tag{display:inline-block;margin-top:12px;background:rgba(217,119,6,.15);color:#d97706;padding:3px 10px;border-radius:12px;font-size:.75em;font-weight:700}
+
+        /* 갤러리 */
+        .gal-wrap{background:#120d06;padding:70px 20px}
+        .gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:12px;max-width:1050px;margin:0 auto}
+        .gal-item{border-radius:12px;overflow:hidden;position:relative;border:1px solid rgba(217,119,6,.15)}
+        .gal-item.big{grid-row:1/3}
+        .gal-item img{width:100%;height:100%;min-height:180px;object-fit:cover;display:block;transition:transform .5s;filter:brightness(.9) contrast(1.05)}
+        .gal-item:hover img{transform:scale(1.06);filter:brightness(1)}
+        .gal-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:14px 12px;font-size:.85em;font-weight:700;color:#fbbf24}
+
+        /* 프로세스 */
+        .proc-wrap{max-width:800px;margin:0 auto;position:relative}
+        .proc-line{position:absolute;left:32px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#d97706,rgba(217,119,6,.1))}
+        .proc-item{display:flex;gap:25px;margin-bottom:35px;position:relative}
+        .proc-dot{width:65px;height:65px;background:linear-gradient(135deg,#d97706,#92400e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2em;font-weight:900;flex-shrink:0;position:relative;z-index:1;box-shadow:0 4px 15px rgba(217,119,6,.35)}
+        .proc-content{padding-top:12px}
+        .proc-content h3{font-size:1.05em;font-weight:800;color:#fbbf24;margin-bottom:6px}
+        .proc-content p{font-size:.88em;color:rgba(255,255,255,.6);line-height:1.7}
+
+        /* 지역 */
+        .area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:950px;margin:0 auto}
+        .area-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:24px 18px;text-align:center;transition:border-color .3s}
+        .area-card:hover{border-color:rgba(217,119,6,.4)}
+        .area-card h3{font-size:1.1em;font-weight:900;color:#d97706;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid rgba(217,119,6,.2)}
+        .area-card p{font-size:.81em;color:rgba(255,255,255,.5);line-height:1.85}
+
+        /* 주의사항 */
+        .notice{background:rgba(217,119,6,.08);border:1px solid rgba(217,119,6,.2);border-radius:12px;padding:25px 28px;max-width:800px;margin:0 auto}
+        .notice h3{font-size:1em;font-weight:800;color:#fbbf24;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .notice p{font-size:.88em;color:rgba(255,255,255,.65);line-height:1.85}
+
+        /* CTA */
+        .cta-sec{background:linear-gradient(135deg,#2d1f0e,#1a1208,#2d1f0e);padding:85px 20px;text-align:center;position:relative;overflow:hidden}
+        .cta-sec::before{content:'🔨';position:absolute;font-size:20em;opacity:.04;top:50%;left:50%;transform:translate(-50%,-50%)}
+        .cta-inner{position:relative;z-index:1}
+        .cta-sec h2{font-size:clamp(1.8em,4vw,2.8em);font-weight:900;margin-bottom:15px}
+        .cta-sec h2 span{color:#d97706}
+        .cta-sec p{color:rgba(255,255,255,.72);margin-bottom:40px;font-size:1.05em;line-height:1.75}
+        .cta-btn{display:inline-block;background:linear-gradient(135deg,#d97706,#92400e);color:#fff;padding:22px 60px;border-radius:12px;font-size:1.5em;font-weight:900;text-decoration:none;box-shadow:0 8px 30px rgba(217,119,6,.45);transition:transform .2s}
+        .cta-btn:hover{transform:scale(1.04)}
+        .cta-note{margin-top:20px;font-size:.88em;color:rgba(255,255,255,.4)}
+
+        footer{background:#0d0a05;padding:28px 20px;text-align:center;color:rgba(255,255,255,.28);font-size:.83em;border-top:1px solid rgba(217,119,6,.1)}
+        footer span{color:#d97706}
+
+        @media(max-width:768px){
+            .hero{grid-template-columns:1fr;padding:60px 20px;gap:40px}
+            .hero-right{display:none}
+            .gal-grid{grid-template-columns:1fr 1fr}
+            .gal-item.big{grid-column:1/3;grid-row:auto}
+            .float-call a{font-size:.88em;padding:13px 18px}
+        }
+    </style>
+</head>
+<body>
+
+<div class="float-call">
+    <span>🔨 철거 무료 견적</span>
+    <a href="tel:0504-1362-7778">🔨 0504-1362-7778 지금 전화</a>
+</div>
+
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-badge">🏗️ 서울·인천·경기 철거 전문</div>
+        <h1>
+            <span class="br">인테리어 철거</span>
+            <span class="point">제대로 해야</span>
+            <span class="br">공사가 빠릅니다</span>
+        </h1>
+        <p class="hero-desc">
+            철거는 공사의 시작입니다.<br>
+            빠르고 깔끔하게 철거해야 다음 공사가 순조롭게 진행됩니다.<br>
+            오랜 현장 경험으로 쌓은 노하우로 책임지고 처리합니다.
+        </p>
+        <div class="check-list">
+            <div class="check-item">욕실·주방·바닥·천장 전 공정 철거 가능</div>
+            <div class="check-item">당일 견적 · 빠른 일정 조율</div>
+            <div class="check-item">폐기물 처리까지 한번에 해결</div>
+            <div class="check-item">서울·인천·경기 전 지역 출동</div>
+        </div>
+        <div class="hero-btns">
+            <a href="tel:0504-1362-7778" class="btn-main">🔨 무료 견적 전화</a>
+            <a href="#services" class="btn-sub">서비스 보기 ↓</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="quick-card">
+            <div class="quick-title">🔨 철거 가능 공정</div>
+            <div class="work-list">
+                <div class="work-item"><span class="name">욕실 전체 철거</span><span class="tag">당일 가능</span></div>
+                <div class="work-item"><span class="name">주방 철거</span><span class="tag">당일 가능</span></div>
+                <div class="work-item"><span class="name">바닥재 철거</span><span class="tag">빠른 진행</span></div>
+                <div class="work-item"><span class="name">천장·벽체 철거</span><span class="tag">전문 처리</span></div>
+                <div class="work-item"><span class="name">상가·사무실 철거</span><span class="tag">대형 가능</span></div>
+                <div class="work-item"><span class="name">폐기물 처리</span><span class="tag">함께 해결</span></div>
+            </div>
+            <div class="call-now">
+                <p>지금 바로 무료 견적 받으세요</p>
+                <a href="tel:0504-1362-7778">📞 0504-1362-7778</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="badge-bar">
+    <div class="badge-wrap">
+        <div class="badge-item"><span class="badge-n">당일</span><div class="badge-l">견적 가능</div></div>
+        <div class="badge-item"><span class="badge-n">전국</span><div class="badge-l">서울·인천·경기</div></div>
+        <div class="badge-item"><span class="badge-n">깔끔</span><div class="badge-l">마무리 보장</div></div>
+        <div class="badge-item"><span class="badge-n">빠른</span><div class="badge-l">일정 조율</div></div>
+        <div class="badge-item"><span class="badge-n">투명</span><div class="badge-l">견적 공개</div></div>
+    </div>
+</div>
+
+<section class="sec" style="background:#1a1208" id="services">
+    <div class="sec-inner">
+        <div class="sec-head">
+            <div class="sec-tag">SERVICES</div>
+            <h2 class="sec-title">철거 <span>서비스 항목</span></h2>
+            <p class="sec-desc">모든 철거 공정 직접 진행 — 빠르고 깔끔하게 처리합니다</p>
+        </div>
+        <div class="svc-grid">
+            <div class="svc-card"><span class="svc-icon">🚿</span><h3>욕실 전체 철거</h3><p>타일·방수·변기·세면대·욕조까지 욕실 전체를 깔끔하게 철거합니다</p><span class="svc-tag">당일 가능</span></div>
+            <div class="svc-card"><span class="svc-icon">🍳</span><h3>주방 철거</h3><p>싱크대·상하부장·타일·바닥까지 주방 전체 철거 및 폐기물 처리</p><span class="svc-tag">당일 가능</span></div>
+            <div class="svc-card"><span class="svc-icon">🏠</span><h3>바닥재 철거</h3><p>마루·장판·타일·데코타일 등 모든 바닥재 철거. 접착제 제거까지</p><span class="svc-tag">빠른 진행</span></div>
+            <div class="svc-card"><span class="svc-icon">🏗️</span><h3>천장·벽체 철거</h3><p>도배지·몰딩·석고보드·단열재 등 천장 벽체 철거 전문 처리</p><span class="svc-tag">전문 처리</span></div>
+            <div class="svc-card"><span class="svc-icon">🏢</span><h3>상가·사무실 철거</h3><p>인테리어 전체 철거부터 칸막이·천장·바닥 대형 공간 철거 가능</p><span class="svc-tag">대형 가능</span></div>
+            <div class="svc-card"><span class="svc-icon">🚪</span><h3>문·창호 철거</h3><p>중문·방문·창문·샷시 등 문 및 창호류 안전하게 철거 처리</p><span class="svc-tag">안전 철거</span></div>
+            <div class="svc-card"><span class="svc-icon">🗑️</span><h3>폐기물 처리</h3><p>철거 후 발생하는 폐기물 수거·운반·처리까지 한번에 해결</p><span class="svc-tag">함께 해결</span></div>
+            <div class="svc-card"><span class="svc-icon">🔨</span><h3>부분 철거</h3><p>전체가 아닌 특정 부위만 선택적으로 철거. 최소 피해 공법 적용</p><span class="svc-tag">부분 가능</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="gal-wrap">
+    <div class="sec-head" style="margin-bottom:35px">
+        <div class="sec-tag">GALLERY</div>
+        <h2 class="sec-title">실제 <span>철거 현장</span></h2>
+        <p class="sec-desc" style="margin-bottom:0">직접 작업한 현장 사진입니다</p>
+    </div>
+    <div class="gal-grid">
+        <div class="gal-item big"><img src="https://loremflickr.com/700/600/demolition,construction?random=11" alt="철거 현장 전체"><div class="gal-label">🔨 아파트 전체 철거 현장</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/bathroom,renovation?random=22" alt="욕실 철거"><div class="gal-label">🚿 욕실 철거</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/kitchen,renovation?random=33" alt="주방 철거"><div class="gal-label">🍳 주방 철거</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/floor,tile?random=44" alt="바닥 철거"><div class="gal-label">🏠 바닥 철거</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/ceiling,interior?random=55" alt="천장 철거"><div class="gal-label">🏗️ 천장 철거</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/office,demolition?random=66" alt="상가 철거"><div class="gal-label">🏢 상가 철거</div></div>
+        <div class="gal-item"><img src="https://loremflickr.com/400/290/waste,construction?random=77" alt="폐기물 처리"><div class="gal-label">🗑️ 폐기물 처리</div></div>
+    </div>
+</div>
+
+<section class="sec" style="background:#1a1208">
+    <div class="sec-inner">
+        <div class="sec-head">
+            <div class="sec-tag">PROCESS</div>
+            <h2 class="sec-title">철거 <span>진행 순서</span></h2>
+            <p class="sec-desc">전화 한 통으로 시작 — 견적부터 마무리까지 책임집니다</p>
+        </div>
+        <div class="proc-wrap">
+            <div class="proc-line"></div>
+            <div class="proc-item"><div class="proc-dot">1</div><div class="proc-content"><h3>전화 상담 및 현장 파악</h3><p>철거 범위·일정·환경을 전화로 먼저 파악합니다. 사진 전송 시 더 정확한 안내 가능합니다.</p></div></div>
+            <div class="proc-item"><div class="proc-dot">2</div><div class="proc-content"><h3>현장 방문 무료 견적</h3><p>직접 현장을 확인하고 투명한 견적을 드립니다. 숨은 비용 없이 처음 말씀드린 금액 그대로입니다.</p></div></div>
+            <div class="proc-item"><div class="proc-dot">3</div><div class="proc-content"><h3>일정 확정 및 착수</h3><p>견적 확인 후 작업 일정을 조율합니다. 빠른 일정 진행이 필요하신 경우 최우선으로 배정합니다.</p></div></div>
+            <div class="proc-item"><div class="proc-dot">4</div><div class="proc-content"><h3>철거 작업 진행</h3><p>인접 세대 피해 최소화하며 안전하고 빠르게 철거합니다. 작업 중 발생하는 변경사항은 즉시 공유합니다.</p></div></div>
+            <div class="proc-item"><div class="proc-dot">5</div><div class="proc-content"><h3>폐기물 처리 및 마무리</h3><p>철거 완료 후 폐기물을 깔끔하게 수거·처리합니다. 다음 공사팀이 바로 들어올 수 있는 상태로 마무리합니다.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="sec" style="background:#120d06">
+    <div class="sec-inner">
+        <div class="sec-head">
+            <div class="sec-tag">SERVICE AREA</div>
+            <h2 class="sec-title">출동 <span>가능 지역</span></h2>
+            <p class="sec-desc">서울·인천·경기 전 지역 출동 가능</p>
+        </div>
+        <div class="area-grid">
+            <div class="area-card"><h3>서울</h3><p>강남 서초 송파 강동 강서 마포 종로 중구 용산 성동 광진 동대문 성북 강북 노원 은평 양천 구로 영등포 동작 관악</p></div>
+            <div class="area-card"><h3>경기</h3><p>수원 성남 분당 용인 안양 부천 광명 평택 안산 고양 일산 의정부 파주 김포 하남 남양주 구리 광주 이천 양평</p></div>
+            <div class="area-card"><h3>인천</h3><p>중구 동구 미추홀 연수 남동 부평 계양 서구 강화 송도 청라 검단</p></div>
+            <div class="area-card"><h3>전국</h3><p>위 지역 외에도 규모에 따라 전국 출동 가능합니다. 먼저 전화 주시면 확인 후 안내드립니다.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="sec" style="background:#1a1208">
+    <div class="sec-inner">
+        <div class="sec-head">
+            <div class="sec-tag">NOTICE</div>
+            <h2 class="sec-title">작업 전 <span>꼭 확인하세요</span></h2>
+        </div>
+        <div class="notice">
+            <h3>⚠️ 철거 작업 전 안내사항</h3>
+            <p>
+                · 철거 전 가스·수도·전기 차단 여부를 미리 확인해 주세요.<br>
+                · 아파트·빌라의 경우 관리사무소 사전 신고가 필요할 수 있습니다.<br>
+                · 석면이 포함된 자재(구형 천장재·바닥재 등)는 별도 처리 비용이 발생할 수 있습니다.<br>
+                · 철거 범위가 변경될 경우 추가 비용이 발생할 수 있으며 사전에 협의 후 진행합니다.<br>
+                · 작업 중 인접 세대 소음이 발생할 수 있으니 이웃에게 미리 양해를 구해 주세요.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-sec">
+    <div class="cta-inner">
+        <h2>철거 고민 중이시라면<br><span>지금 바로 전화하세요</span></h2>
+        <p>현장 사진 한 장만 보내주셔도 대략적인 견적 안내 가능합니다<br>빠르고 깔끔하게 처리해드리겠습니다</p>
+        <a href="tel:0504-1362-7778" class="cta-btn">🔨 0504-1362-7778 무료 견적</a>
+        <p class="cta-note">24시간 문자·전화 접수 · 서울 인천 경기 전국 · 당일 견적 가능</p>
+    </div>
+</section>
+
+<footer>
+    <p>철거 전문 · 서울 인천 경기 전국</p>
+    <p style="margin-top:8px">무료 견적 문의: <span>0504-1362-7778</span></p>
+</footer>
+
+</body>
+</html>
